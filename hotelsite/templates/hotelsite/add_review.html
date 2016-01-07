@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <form id='add-review' role='form' method='POST' action='/reviews/add'>
+    	{% csrf_token %}
+
+    	
+
+	    	<div class='form-group col-lg-12'>
+	  			<input type='submit' class='btn btn-primary' value='Submit' />
+	  		</div>
+	  	</div>
+
+    </form>
+{% endblock content %}

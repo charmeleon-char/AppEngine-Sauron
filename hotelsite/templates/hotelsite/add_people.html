@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <form id='add-review' role='form' method='POST' action='/people/add'>
+    	{% csrf_token %}
+
+    	<div class='container-fluid'>
+	    	<div class='form-group col-lg-12'>
+	    		<label for="title">Hobbie Title:</label>
+	    		<input type="text" class="form-control" id="title" name="title" placeholder="Title of your Hobbie">
+	  		</div>
+
+	  		<div class='form-group col-lg-12'>
+	    		<label for="tipo">Hobbie tipo:</label>
+	    		<input type="text" class="form-control" id="tipo" name="tipo" placeholder=" tipo">
+	  		</div>
+	  		<div class='form-group col-lg-12'>
+	    		<label for="description">Hobbie description:</label>
+	    		<input type="text" class="form-control" id="description" name="description" placeholder="description">
+	  		</div>
+
+	  		<div class='form-group col-lg-12'>
+	  			<label for="Name">Name:</label>
+	  			<input class="form-control" rows="6" placeholder='Give us your Name' name='Name' id='Name'></input>
+	  		</div>
+
+	  		<div class='form-group col-lg-12'>
+	  			<label for="Age">Age:</label>
+	  			<textarea class="form-control" rows="6" placeholder='Give us your Age' name='Age' id='Age'></textarea>
+	  		</div>
+
+	    	<div class='form-group col-lg-12'>
+	  			<input type='submit' class='btn btn-primary' value='Submit' />
+	  		</div>
+	  	</div>
+
+    </form>
+{% endblock content %}

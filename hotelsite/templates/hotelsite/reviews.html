@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <div class="jumbotron">
+        <p>
+        	Welcome to the reviews page!
+        </p>
+        <p>
+        	<a href='/reviews/add'>Create a review.</a>
+        </p>
+    </div>
+
+    <div class="container-fluid">
+    	{{ TestModel.length }}
+    	{% for TestModel in TestModel %} 
+    		{{ TestModel.foo.InicioSegunda.TerceraDimension }}
+    	{% endfor %}
+    </div>
+{% endblock content %}

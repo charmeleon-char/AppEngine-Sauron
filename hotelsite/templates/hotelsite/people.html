@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <div class="jumbotron">
+        <p>
+        	Welcome to the people page!
+        </p>
+        <p>
+        	<a href='/people/add'>Create a people.</a>
+        </p>
+    </div>
+
+    <div class="container-fluid">
+    	{{ people.length }}
+    	{% for people in people %} 
+    		{{ people.title }}
+    	{% endfor %}
+    </div>
+{% endblock content %}
